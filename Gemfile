@@ -10,4 +10,4 @@ gem 'commonmarker'
 gem 'redcarpet'
 gem 'github-markup'
 gem 'kramdown'
-
+gem 'rdiscount'

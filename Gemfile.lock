@@ -52,6 +52,7 @@ GEM
       mem
       pygments.rb (~> 1.0)
       sanitize
+    rdiscount (2.2.0.1)
     redcarpet (3.4.0)
     ruby-enum (0.7.2)
       i18n
@@ -73,6 +74,7 @@ DEPENDENCIES
   github-markup
   kramdown
   qiita-markdown
+  rdiscount
   redcarpet
 
 BUNDLED WITH
