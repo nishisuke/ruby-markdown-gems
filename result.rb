@@ -22,7 +22,7 @@ MARKDOWN
 
 p markdown
 
-File.open('README.html', 'w') do |f|
+File.open('result.html', 'w') do |f|
   f.puts(RedcarpetWrapper.new.render_html("# Redcarpet\n実装済み\n#{markdown}"))
   f.puts(CommonmarkerWrapper.new.render_html("# Commonmarker\n実装済み\n#{markdown}"))
   f.puts(QiitaWrapper.new.render_html("# Qiita\n最初からおk！だけどデフォでdisabled\n#{markdown}"))

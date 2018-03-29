@@ -3,7 +3,7 @@ require 'commonmarker'
 
 class CommonmarkerWrapper < Wrapper
   def initialize
-    @renderer = TaskListRenderer.new
+    @renderer = TaskListRenderer.new(options: :SOURCEPOS)
   end
 
   def render_html(markdown)
@@ -12,7 +12,7 @@ class CommonmarkerWrapper < Wrapper
   end
 
   class TaskListRenderer < CommonMarker::HtmlRenderer
-    def initialize
+    def initialize(options: :DEFAULT, extensions: [])
       super
       @task_list_item_id = 0
     end
@@ -20,7 +20,7 @@ class CommonmarkerWrapper < Wrapper
     def list_item(node)
       check_box_tag = if node.first_child.first_child.string_content.match(/\A\[[x ]?\] /)
         @task_list_item_id += 1
-        "<input type='checkbox' data-task-key=#{@task_list_item_id}>"
+        "<input type='checkbox' data-pos=#{sourcepos(node)} data-task-key=#{@task_list_item_id}>"
       end
 
       block do
