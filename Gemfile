@@ -9,5 +9,5 @@ gem 'github-markdown'
 gem 'commonmarker'
 gem 'redcarpet'
 gem 'github-markup'
+gem 'kramdown'
 
-gem 'task_list'

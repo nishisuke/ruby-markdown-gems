@@ -28,6 +28,7 @@ GEM
       nokogiri (>= 1.4)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    kramdown (1.16.2)
     mem (0.1.5)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -59,8 +60,6 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4)
-    task_list (1.0.2)
-      html-pipeline
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -72,9 +71,9 @@ DEPENDENCIES
   commonmarker
   github-markdown
   github-markup
+  kramdown
   qiita-markdown
   redcarpet
-  task_list
 
 BUNDLED WITH
    1.16.1
