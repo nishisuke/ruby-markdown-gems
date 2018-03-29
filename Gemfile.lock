@@ -72,6 +72,7 @@ DEPENDENCIES
   commonmarker
   github-markdown
   github-markup
+  html-pipeline
   kramdown
   qiita-markdown
   rdiscount
