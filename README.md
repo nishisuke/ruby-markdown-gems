@@ -12,7 +12,7 @@ checkboxのdone undoneをするために
 - serverでhtml生成時にふっとく
 
 | gem | result | md原文の位置特定 | reason |
-|:--|:--:| | |
+| -- | -- | -- | -- |
 | RedcarpetWrapper | 三角 | o 連番 | 卜部さん曰くsegv |
 | CommonmarkerWrapper | o | o 原文のROW COLを保持 |  |
 | QiitaWrapper | o | o 連番 | デフォで実装されてるがcheckboxの何個め判定の実装は必要 |
