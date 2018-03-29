@@ -11,11 +11,11 @@ checkboxのdone undoneをするために
 - js でkey順番にkey振る
 - serverでhtml生成時にふっとく
 
-| gem | result | md原文の位置特定 | reason |
-| -- | -- | -- | -- |
-| RedcarpetWrapper | 三角 | o 連番 | 卜部さん曰くsegv |
-| CommonmarkerWrapper | o | o 原文のROW COLを保持 |  |
-| QiitaWrapper | o | o 連番 | デフォで実装されてるがcheckboxの何個め判定の実装は必要 |
-| KramdownWrapper | x |  | check_boxするにはopen classしてoverrideしかない.また改行が二行必要などいけてない |
-| RdiscountWrapper | x |  | Cの実装に手を出すはめになる |
-| PipeWrapper | o | qiitaはこれのラッパー qiitaのラッパーは変なclassとか付与されるからこっちもあり  | もともと処理を追加できる設計思想 |
+| gem | result | ありな理由 |  md原文の位置特定 | reason |
+| --- | ------ | ---------- | ----------------- | ------ |
+| CommonmarkerWrapper | o | serverの実装のみ | o 原文のROW COLを保持 |  |
+| QiitaWrapper | o | jsで連番振れば実装がミニマム, serverで振るならしたのでも | o 連番 | デフォで実装されてるがcheckboxの何個め判定の実装は必要 |
+| PipeWrapper | o | serverで連番振るとかqiitaオーバースペックなら  | qiitaはこれのラッパー qiitaのラッパーは変なclassとか付与されるからこっちもあり  | もともと処理を追加できる設計思想 |
+| RedcarpetWrapper | 三角 | ない | o 連番 | 卜部さん曰くsegv |
+| KramdownWrapper | x | ない |  | check_boxするにはopen classしてoverrideしかない.また改行が二行必要などいけてない |
+| RdiscountWrapper | x | ない |  | Cの実装に手を出すはめになる |
