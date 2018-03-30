@@ -1,6 +1,22 @@
 ## 結論
+html-pipelineとcommonmarkerの二択でcommonmarkerを選択
+
+commonmarkerがcheckbox実装がシンプル。
+更新頻度はどっこいどっこい.
+starはhtml-pipelineが多い.
+html-pipelineはそもそもmdというよりhtmlを木構造でパースするから
+処理なんでも突っ込んでって感じ。
+commonmakerはmd用。
 
 
+html-pipelineだとこんな感じのcheckbox実装
+https://github.com/increments/qiita-markdown/blob/master/lib/qiita/markdown/filters/checkbox.rb
+commonmarkerだと
+./commonmarker_wrapper.rb
+みたいな実装
+
+
+## 調査
 
 checkboxのdone undoneをするために
 どのチェックが押されたかの判断が必要
@@ -23,3 +39,11 @@ checkboxのdone undoneをするために
 | Redcarpet | 三角 | ない | o 連番 | 卜部さん曰くsegv |
 | Kramdown | x | ない |  | check_boxするにはopen classしてoverrideしかない.また改行が二行必要などいけてない |
 | Rdiscount | x | ない |  | Cの実装に手を出すはめになる |
+
+### 新たな選択肢
+gemの中には手を加えず
+出来上がったhtmlのliを正規表現で捕まえて条件判定してchechboxに変える.
+
+## 二択
+1. commonmarkerでやる
+2. html-pipelineでqiitaの実装見ながらやる
