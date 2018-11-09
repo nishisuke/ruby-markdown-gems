@@ -8,6 +8,13 @@ class CommonmarkerWrapper < Wrapper
 
   def render_html(markdown)
     doc = CommonMarker.render_doc(markdown, :DEFAULT)
+    doc.walk do |node|
+      p node.type
+      if node.type == :paragraph
+        p node.first_child.string_content
+      end
+    end
+
     renderer.render(doc)
   end
 
